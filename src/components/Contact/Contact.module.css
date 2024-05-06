@@ -1,0 +1,41 @@
+.contactDataContainer {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contactCard {
+    list-style-type: none;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactData {
+    padding: 10px;
+}
+
+.contactData p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.deleteButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+    background-color: #c82333;
+}

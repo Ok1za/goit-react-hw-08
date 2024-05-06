@@ -1,18 +1,37 @@
-import styles from "./Contact.module.css";
+import { useDispatch } from "react-redux";
+import { deleteContact } from "../../redux/contacts/operations";
+import css from "./Contact.module.css";
 
-const Contact = ({ contact, onDeleteContact }) => {
+function Contact({ contactData }) {
+    const dispatch = useDispatch();
+    const handleDeleteButton = (contactId) => {
+        dispatch(deleteContact(contactId));
+    };
+
     return (
-        <div className={styles.contactContainer}>
-                <span className={styles.contactName}> {contact.name}</span>
-                <span className={styles.Number}> {contact.number}</span>
-            <button
-                className={styles.deleteButton}
-                type="button"
-                onClick={() => onDeleteContact(contact.id)}>
-                Delete
-            </button>
+        <div className={css.contactDataContainer}>
+            <ul className={css.contactCard}>
+                <div>
+                    <li className={css.contactData}>
+                        <p>{contactData.name}</p>
+                    </li>
+                    <li className={css.contactData}>
+                        <p>{contactData.number}</p>
+                    </li>
+                </div>
+
+                <li>
+                    {" "}
+                    <button
+                        className={css.deleteButton}
+                        type="button"
+                        onClick={() => handleDeleteButton(contactData.id)}>
+                        Delete
+                    </button>
+                </li>
+            </ul>
         </div>
     );
-};
+}
 
 export default Contact;

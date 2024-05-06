@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
-import styles from "./SearchBox.module.css";
+import css from "./SearchBox.module.css";
 import { useState } from "react";
-import { setFilter } from "../../redux/contactsSlice";
 
 const SearchBox = () => {
     const dispatch = useDispatch();
@@ -12,22 +11,22 @@ const SearchBox = () => {
     };
 
     const handleFilterSubmit = () => {
-        dispatch(setFilter(filterValue));
+        dispatch(filterValue);
     };
 
     return (
-        <div>
-        <label className={styles.searchBoxLabel}>
-            <span className={styles.searchBoxLabelText}>Find contacts by name</span>
-            <input
-                className={styles.searchBoxInput}
-                type="text"
-                value={filterValue}
-                onChange={handleFilterChange}
-                placeholder="Search contacts"
-            />
-            </label>
-            <button className={styles.searchButton} onClick={handleFilterSubmit}>Search</button>
+        <div className={css.searchBoxLabel}>
+            <span className={css.searchBoxLabelText}>Find contacts by name</span>
+            <div className={css.searchButtonContainer}>
+                <input
+                    className={css.searchBoxInput}
+                    type="text"
+                    value={filterValue}
+                    onChange={handleFilterChange}
+                    placeholder="Search contacts"
+                />
+                <button className={css.searchButton} onClick={handleFilterSubmit}>Search</button>
+            </div>
         </div>
     );
 };
