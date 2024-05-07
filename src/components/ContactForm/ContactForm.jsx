@@ -9,7 +9,7 @@ function ContactForm() {
     const MAX_NAME_VALIDATION = 20;
     const MIN_NAME_VALIDATION = 4;
     const MIN_PHONE_VALIDATION = 7;
-    
+
     const contactFormSchema = Yup.object({
         name: Yup.string()
             .required("Username is required!")
