@@ -38,12 +38,13 @@ const LoginForm = () => {
             validationSchema={loginFormSchema}>
             <Form className={css.formContainer}>
                 <label className={css.formLabel}>
-                    {" "}
+                    {"  "}
                     Email
                     <Field
                         type="email"
                         name="email"
                         placeholder="email"
+                        className={css.formInput}
                     />
                     <ErrorMessage name="email" component="div" className={css.error} />
                 </label>
@@ -51,7 +52,12 @@ const LoginForm = () => {
                 <label className={css.formLabel}>
                     {" "}
                     Password
-                    <Field type="password" name="password" placeholder="password" />
+                    <Field
+                        type="password"
+                        name="password"
+                        placeholder="password"
+                        className={css.formInput}
+                    />
                     <ErrorMessage name="password" component="div" className={css.error} />
                 </label>
                 <button type="submit" className={css.submitFormButton}>

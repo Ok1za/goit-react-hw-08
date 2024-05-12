@@ -11,7 +11,7 @@ const RegistrationForm = () => {
 
     const registrationFormSchema = Yup.object({
         name: Yup.string()
-            .required("User name or nikname is required!")
+            .required("User name or nickname is required!")
             .max(
                 MAX_NAME_VALIDATION,
                 `Your username must be less or equal ${MAX_NAME_VALIDATION} characters!`
