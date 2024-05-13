@@ -10,7 +10,7 @@
   border-radius: 8px;
   margin: 0 auto;
   margin-top: 34px;
-  background-color: #efefef;
+  background-color: #f1ecec;
 }
 
 .formLabel {
@@ -19,6 +19,7 @@
 
 .formInput {
   margin-top: 10px;
+  margin-left: 0px;
 }
 
 .formLabel input {
